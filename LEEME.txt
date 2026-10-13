@@ -4,3 +4,4 @@ Descomprime el ZIP. Sube los 11 HTML y la carpeta images completa al repositorio
 
 Los Cerezos y Arrieta muestran Próximamente. Las imágenes se conservaron sin cambios y se separaron en images.
 Prueba de actualización automática
+Segunda prueba de actualización automática
