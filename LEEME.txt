@@ -1,0 +1,5 @@
+WEB FRANULIC Y ASOCIADOS
+
+Descomprime el ZIP. Sube los 11 HTML y la carpeta images completa al repositorio. No subas el ZIP como único archivo. index.html debe quedar en la raíz.
+
+Los Cerezos y Arrieta muestran Próximamente. Las imágenes se conservaron sin cambios y se separaron en images.
