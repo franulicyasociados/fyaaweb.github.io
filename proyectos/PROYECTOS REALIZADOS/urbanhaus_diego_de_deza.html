@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Urbanhaus Diego de Deza, proyecto de Franulic y Asociados Arquitectos Consultores.">
+  <title>Urbanhaus Diego de Deza | Franulic y Asociados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --text: #f2f2f2;
+      --muted: #989898;
+      --line: #292929;
+      --max: 1380px;
+      --pad: clamp(22px, 4vw, 70px);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.55;
+    }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(calc(100% - var(--pad) * 2), var(--max)); margin: 0 auto; }
+
+    .topbar {
+      min-height: 118px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 18px; }
+    .brand-mark {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      filter: grayscale(1) brightness(1.8) contrast(.75);
+      opacity: .92;
+    }
+    .brand-name { font-size: 13px; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; }
+    .brand-sub { margin-top: 6px; font-size: 9px; letter-spacing: .35em; color: var(--muted); text-transform: uppercase; }
+    .back-top {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #777;
+    }
+
+    .intro { padding: clamp(72px, 10vw, 150px) 0 70px; }
+    .place { color: var(--muted); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 22px; }
+    h1 {
+      max-width: 1050px;
+      font-size: clamp(48px, 8.5vw, 126px);
+      line-height: .9;
+      font-weight: 300;
+      letter-spacing: -.055em;
+    }
+
+    .hero {
+      width: min(calc(100% - var(--pad) * 2), 1540px);
+      margin: 0 auto;
+      aspect-ratio: 1.82 / 1;
+      overflow: hidden;
+      background: #161616;
+    }
+    .hero img { object-position: center center; }
+
+    .project-info { padding: 90px 0 120px; }
+    .info-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(50px, 9vw, 150px); }
+    .summary { font-size: clamp(21px, 2.2vw, 34px); line-height: 1.35; letter-spacing: -.025em; max-width: 720px; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 34px; }
+    .fact { border-top: 1px solid var(--line); padding-top: 15px; }
+    .fact dt { color: var(--muted); font-size: 9px; letter-spacing: .17em; text-transform: uppercase; margin-bottom: 6px; }
+    .fact dd { font-size: 13px; line-height: 1.45; }
+
+    .gallery { padding-bottom: 140px; }
+    .gallery-list { display: flex; flex-direction: column; gap: clamp(52px, 8vw, 118px); }
+    .figure {
+      width: min(72%, 920px);
+      overflow: hidden;
+      background: #151515;
+    }
+    .figure.left { align-self: flex-start; }
+    .figure.right { align-self: flex-end; }
+    .figure.landscape { aspect-ratio: 1.55 / 1; }
+    .figure img { transition: transform .9s ease; }
+    .figure:hover img { transform: scale(1.012); }
+
+    .drawing-section { padding: 20px 0 120px; border-top: 1px solid var(--line); }
+    .section-head { padding: 40px 0 50px; display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+    .section-head h2 { font-size: clamp(28px, 4vw, 56px); font-weight: 300; letter-spacing: -.04em; }
+    .section-head p { color: var(--muted); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+    .plan { background: #efefef; padding: clamp(12px, 2vw, 30px); }
+    .plan img { height: auto; object-fit: contain; }
+    .caption { color: var(--muted); font-size: 10px; letter-spacing: .09em; margin-top: 13px; }
+
+    .bottom-nav { border-top: 1px solid var(--line); }
+    .bottom-link { min-height: 138px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+    .bottom-label { color: var(--muted); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
+    .bottom-title { font-size: clamp(18px, 2.5vw, 36px); font-weight: 300; letter-spacing: -.025em; }
+
+    @media (max-width: 830px) {
+      .topbar { min-height: 94px; }
+      .brand-mark { width: 44px; height: 44px; }
+      .brand-name { font-size: 10px; }
+      .brand-sub { font-size: 7px; letter-spacing: .28em; }
+      .back-top { display: none; }
+      .intro { padding-top: 64px; }
+      .hero { aspect-ratio: 1.15 / 1; }
+      .info-grid { grid-template-columns: 1fr; }
+      .facts { grid-template-columns: 1fr; }
+      .gallery-list { gap: 34px; }
+      .figure { width: 88%; }
+      .figure.landscape { aspect-ratio: 1.28 / 1; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 10px; }
+      .bottom-link { min-height: 112px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="container topbar">
+    <a class="brand" href="../../index.html" aria-label="Volver al inicio">
+      <img class="brand-mark" src="../../images/nuevo_6b07eb323d26d3894ff5.jpg" alt="Franulic y Asociados">
+      <div>
+        <div class="brand-name">Franulic y Asociados</div>
+        <div class="brand-sub">Arquitectos Consultores</div>
+      </div>
+    </a>
+    <a class="back-top" href="../../proyectos_realizados.html">Volver a proyectos</a>
+  </header>
+
+  <main>
+    <section class="container intro">
+      <p class="place">Las Condes · Santiago</p>
+      <h1>Urbanhaus<br>Diego de Deza</h1>
+    </section>
+
+    <section class="hero" aria-label="Vista general del proyecto">
+      <img src="../../images/nuevo_cbefdf4380f6807841ba.jpg" alt="Vista general de Urbanhaus Diego de Deza">
+    </section>
+
+    <section class="container project-info">
+      <div class="info-grid">
+        <p class="summary">Conjunto residencial de seis viviendas que combina patios privados y terrazas panorámicas, articulando espacios interiores y exteriores en un contexto urbano consolidado.</p>
+        <dl class="facts">
+          <div class="fact"><dt>Ubicación</dt><dd>Diego de Deza 1407, Las Condes</dd></div>
+          <div class="fact"><dt>Año</dt><dd>2020</dd></div>
+          <div class="fact"><dt>Tipología</dt><dd>Viviendas en condominio</dd></div>
+          <div class="fact"><dt>Superficie</dt><dd>1.380 m²</dd></div>
+          <div class="fact"><dt>Unidades</dt><dd>6 viviendas con patio exclusivo y terraza panorámica</dd></div>
+          <div class="fact"><dt>Mandante</dt><dd>Inmobiliaria Urbanhaus</dd></div>
+          <div class="fact"><dt>Arquitectura</dt><dd>Franulic y Asociados</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="container gallery" aria-label="Galería de Urbanhaus Diego de Deza">
+      <div class="gallery-list">
+        <figure class="figure landscape left"><img src="../../images/nuevo_c3a72dfab1a4c27ffb9a.jpg" alt="Patio privado"></figure>
+        <figure class="figure landscape right"><img src="../../images/nuevo_9d2661258e98fe2ae2c4.jpg" alt="Terraza panorámica"></figure>
+        <figure class="figure landscape left"><img src="../../images/nuevo_dc17bd1deb87eebc51d0.jpg" alt="Living comedor"></figure>
+        <figure class="figure landscape right"><img src="../../images/nuevo_ca801a6ae056af23c2a6.jpg" alt="Cocina"></figure>
+        <figure class="figure landscape left"><img src="../../images/nuevo_b6884ab00d7383bd5cc7.jpg" alt="Dormitorio"></figure>
+        <figure class="figure landscape right"><img src="../../images/nuevo_157aae65f25fe934c4dc.jpg" alt="Baño"></figure>
+        <figure class="figure landscape left"><img src="../../images/nuevo_290dab6e5625bb43e4d8.jpg" alt="Estacionamientos"></figure>
+      </div>
+    </section>
+
+    <section class="container drawing-section">
+      <div class="section-head">
+        <h2>Casa A</h2>
+        <p>Plantas arquitectónicas</p>
+      </div>
+      <figure>
+        <div class="plan"><img src="../../images/nuevo_897ae7322636641a632f.jpg" alt="Plantas de Casa A"></div>
+        <figcaption class="caption">Casa A · Primer, segundo y tercer piso</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="bottom-nav">
+    <a class="container bottom-link" href="../../proyectos_realizados.html">
+      <div>
+        <div class="bottom-label">Proyectos</div>
+        <div class="bottom-title">← Volver al listado de proyectos</div>
+      </div>
+    </a>
+  </footer>
+
+</body></html>
